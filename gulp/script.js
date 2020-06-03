@@ -6,12 +6,23 @@ const { source, target } = require("./config").globs.script;
 
 function scriptCompile() {
   return src(source, { sourcemaps: true })
-    .pipe(babel())
+    .pipe(
+      babel({
+        presets: ["@babel/env"],
+      })
+    )
     .pipe(dest(target, { sourcemaps: "." }));
 }
 
 function scriptCompileWithUglify() {
-  return src(source).pipe(babel()).pipe(uglify()).pipe(dest(target));
+  return src(source)
+    .pipe(
+      babel({
+        presets: ["@babel/env"],
+      })
+    )
+    .pipe(uglify())
+    .pipe(dest(target));
 }
 
 function scriptWatch() {
