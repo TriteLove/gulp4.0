@@ -1,10 +1,17 @@
-const {  task, parallel } = require("gulp");
-const { lessWatch, lessBuild, lessClean } = require('./gulp/less');
-const { scriptBuild, scriptWatch, scriptClean } = require('./gulp/script');
+const { task, parallel } = require("gulp");
+const { lessWatch, lessBuild } = require("./gulp/less");
+const { scriptBuild, scriptWatch } = require("./gulp/script");
 
 /**
- * Task
+ * task watch
  */
+task("watch:less", lessWatch);
+task("watch:script", scriptWatch);
 task("watch", parallel(lessWatch, scriptWatch));
-task("clean", parallel(lessClean, scriptClean));
+
+/**
+ * task build
+ */
+task("build:less", lessBuild);
+task("build:script", scriptBuild);
 task("build", parallel(lessBuild, scriptBuild));

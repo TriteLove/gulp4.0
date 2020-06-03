@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "gulp clean",
     "watch": "gulp watch",
+    "watch:less": "gulp watch:less",
+    "watch:script": "gulp watch:script",
     "build": "gulp build",
+    "build:less": "gulp build:less",
+    "build:script": "gulp build:script",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
