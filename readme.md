@@ -1,22 +1,28 @@
-# gulp4.0简单实现
-
 # 脚本
 ```js
+  // 安装依赖包
+  npm i
+
   // watch任务
-  npm run watch
+  npm run watch //or gulp watch
+  // only less
+  npm run watch:less  //or gulp watch:less
+  // only script
+  npm run watch:script  //or gulp watch:script
 
   // build任务
-  npm run build
-  
-  // clean任务
-  npm run clean
+  npm run build //or gulp build
+  // only less
+  npm run build:less  //or gulp build:less
+  // only script
+  npm run build:script  //or gulp build:script
 ```
 
-## gulp/config.js
-> 配置文件
+# 配置文件
+> /gulp/config.js
 
-## gulp/script.js
-> `js` 任务
+# `js` 任务
+> /gulp/script.js
 
-## gulp/less.js
-> `less` 任务
+# `less` 任务
+> /gulp/less.js
